@@ -6,12 +6,12 @@ make_sidebar()
 
 st.title("Welcome to Diamond Corp")
 
-st.write("Please log in to continue.")
+st.write("Please log in to continue (username `test`, password `test`).")
 
 username = st.text_input("Username")
 password = st.text_input("Password", type="password")
 
-if st.button("Log in"):
+if st.button("Log in", type="primary"):
     if username == "test" and password == "test":
         st.session_state.logged_in = True
         st.success("Logged in successfully!")
